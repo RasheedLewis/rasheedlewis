@@ -61,8 +61,7 @@ export function FadeIn({ children, delay = 0, className, ...props }: BaseProps) 
     return (
         <motion.div
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-10%" }}
+            animate="visible"
             variants={{
                 ...fadeVariants,
                 visible: {
@@ -82,8 +81,7 @@ export function SlideIn({ children, delay = 0, className, ...props }: BaseProps)
     return (
         <motion.div
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-10%" }}
+            animate="visible"
             variants={{
                 ...slideUpVariants,
                 visible: {
@@ -103,9 +101,20 @@ export function StaggerContainer({ children, className, ...props }: BaseProps) {
     return (
         <motion.div
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-10%" }}
+            animate="visible"
             variants={staggerContainerVariants}
+            className={className}
+            {...props}
+        >
+            {children}
+        </motion.div>
+    );
+}
+
+export function StaggerItem({ children, className, ...props }: BaseProps) {
+    return (
+        <motion.div
+            variants={fadeVariants}
             className={className}
             {...props}
         >

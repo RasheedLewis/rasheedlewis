@@ -1,34 +1,13 @@
 ---
-title: "Ambient Notifications"
-description: "A system for delivering notifications without interrupting the user's flow."
-date: "2025-10-15"
-tags: ["Mobile Systems", "Ambient Computing", "Interaction Design"]
+title: "Hands-Free Task Continuity"
+description: "In-motion workers are forced to repeatedly stop and re-orient to complete simple tasks."
+date: "2025-01-01"
+year: "2025"
+tags: ["Mobile Systems", "Interruption Handling", "Spatial UX"]
 ---
 
 # The Friction
 
-Notifications today are aggressive. They demand immediate attention, vibrating our pockets and lighting up our screens regardless of what we are doing. This creates a fragmented attention span and increases cognitive load.
+In-motion workers are forced to repeatedly stop and re-orient to complete simple tasks.
 
-# The System
-
-We designed an "Ambient Notification System" that classifies alerts based on urgency and user context.
-
-## State Model
-
-The system operates in three states:
-
-1.  **Focus Mode**: Only critical alerts (security, health) break through.
-2.  **Flow Mode**: Notifications are queued and visualized as a subtle ambient pulse on the peripheral display.
-3.  **Leisure Mode**: Standard notification behavior.
-
-# The Design
-
-We used a particle system to represent queued notifications. Instead of a badge count, users see a organic "cloud" of particles that grows denser as notifications accumulate. This feels organic rather than bureaucratic.
-
-# The Engineering
-
-The system was built using a local-first architecture. Notification classification happens on-device using a lightweight TFLite model, ensuring privacy. Using the `IntersectionObserver` API equivalents in Swift, we managed the rendering loop to ensure 120fps performance even with the particle effects.
-
-# Why This Matters
-
-By respecting the user's attention, we increased Time Well Spent metrics by 20% in beta testing. This shift from "demand" to "inform" is critical for the next generation of spatial interfaces.
+(Placeholder content for case study)
