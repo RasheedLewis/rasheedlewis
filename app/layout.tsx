@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lalezar, Inter } from "next/font/google"; // Removed Geist
 import "@/styles/globals.css";
+import { Navigation } from "@/components/layout/Navigation";
 
 // Display Font (Headings)
 const lalezar = Lalezar({
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${lalezar.variable} ${inter.variable} antialiased`}
       >
+        <Navigation />
         {children}
       </body>
     </html>
