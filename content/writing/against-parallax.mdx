@@ -1,0 +1,19 @@
+---
+title: "The Case Against Parallax"
+description: "Why motion should explain state, not simulate depth."
+date: "2025-11-01"
+tags: ["Design Philosophy", "Motion"]
+---
+
+Motion on the web often falls into the trap of decoration. We see things move because they *can*, not because they *should*.
+
+Parallax scrolling is the worst offender. It breaks the 1:1 relationship between the user's input (scroll) and the interface's output (movement). This disconnection causes cognitive friction, however subtle.
+
+In my work, I enforce a strict rule: **Usage of motion must map to state changes.**
+
+If an element moves, it must be because:
+1. It is entering the viewport (continuity).
+2. It is changing state (interaction).
+3. It is leaving the viewport (cleanup).
+
+Anything else is noise.
