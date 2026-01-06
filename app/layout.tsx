@@ -14,7 +14,7 @@ const lalezar = Lalezar({
 // Body Font (Text)
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
@@ -29,10 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${lalezar.variable} ${inter.variable} antialiased`}
-      >
+    <html lang="en" className={`${lalezar.variable} ${inter.variable}`}>
+      <body className="antialiased">
         <Navigation />
         {children}
       </body>

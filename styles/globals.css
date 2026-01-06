@@ -9,7 +9,7 @@
 
   /* Typography */
   --font-display: var(--font-lalezar), sans-serif;
-  --font-body: var(--font-inter), sans-serif;
+  --font-body: var(--font-sans), sans-serif;
 
   /* Spacing (Golden Ratio) */
   --spacing-tight: var(--space-tight);
@@ -72,14 +72,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Utility Utilities */
-@utility text-display {
-  font-family: var(--font-display);
-  font-weight: 400;
-  /* Lalezar is single weight */
-  letter-spacing: 0.02em;
+/* Explicit Font Utilities to ensure application */
+@utility font-display {
+  font-family: var(--font-lalezar), "Helvetica Neue", sans-serif;
 }
 
-@utility text-body {
-  font-family: var(--font-body);
+@utility font-body {
+  font-family: var(--font-sans), "Helvetica Neue", sans-serif;
 }
